@@ -133,11 +133,10 @@ const styled = defaultStyle(({ position }) => ({
   position: "fixed",
   zIndex: 999,
   backgroundColor: "white",
-  marginTop: 14,
   minWidth: 100,
   boxShadow: '0 2px 6px 0 rgba(0,0,0,.15)',
-  ...position,
-
+  left: position.left - 300,
+  right: position.right,
   list: {
     margin: 0,
     padding: 0,
