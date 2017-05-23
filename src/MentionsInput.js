@@ -415,7 +415,7 @@ class MentionsInput extends React.Component {
     let position = {};
 
     // guard for mentions suggestions list clipped by right edge of window
-    if (left > container.offsetWidth) {
+    if (left > document.body.clientWidth) {
       position.right = 0;
     } else {
       position.left = left
