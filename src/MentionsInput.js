@@ -405,6 +405,7 @@ class MentionsInput extends React.Component {
 
     let suggestions = ReactDOM.findDOMNode(this.refs.suggestions);
     let highlighter = ReactDOM.findDOMNode(this.refs.highlighter);
+    let textarea = ReactDOM.findDOMNode(this.refs.input);
 
     if(!suggestions) {
       return;
@@ -421,7 +422,7 @@ class MentionsInput extends React.Component {
       position.left = left
     }
 
-    position.top = caretPosition.top + highlighterClientRect.top + 20;
+    position.top = caretPosition.top - textarea.scrollTop + highlighterClientRect.top + 20;
 
     if(isEqual(position, this.state.suggestionsPosition)) {
       return;
